@@ -72,10 +72,9 @@ chmod +x iconchange.sh
 ./iconchange.sh [options]
 ```
 
-or if installed as a global command:
+<b>Or if installed as a global command:</b>
 
 ```bash
 iconchange [options]
 ```
 
-<b>Flag	Argument	Description:</b>
