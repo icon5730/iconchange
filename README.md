@@ -54,7 +54,7 @@ Easily change or restore the application icons for Firefox and Thunderbird on Li
 <b>Installation:</b>
 
 ```bash
-git clone https://github.com/<user>/iconchange.git
+git clone https://github.com/icon5730/iconchange.git
 cd iconchange
 chmod +x iconchange.sh
 ```
