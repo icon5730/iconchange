@@ -15,7 +15,6 @@ Easily change or restore the application icons for Firefox and Thunderbird on Li
 
 
 
-
 | Supports multiple Firefox builds: |
 |------------------|
 | 'firefox" |
@@ -23,14 +22,16 @@ Easily change or restore the application icons for Firefox and Thunderbird on Li
 | 'firefox-esr' |
 | 'firefox-nightly' |
 | 'firefox-developer' |
-|------------------|
+
+
 | Supports multiple Thunderbird builds: |
 |------------------|
 | 'thunderbird' |
 | 'thunderbird-daily' |
 | 'thunderbird-esr' |
 | 'thunderbird-nightly' |
-|------------------|
+
+
 | Accepts icon formats |
 |------------------|
 | 'PNG' |
@@ -38,14 +39,6 @@ Easily change or restore the application icons for Firefox and Thunderbird on Li
 | 'BMP' |
 | 'ICO' |
 
-
-
-| Accepts icon formats: |
-|------------------|
-| `PNG` |
-| `JPG / JPEG` |
-| `BMP` |
-| `ICO` |
 
 
 | Flag | Description |
