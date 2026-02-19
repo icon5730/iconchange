@@ -45,10 +45,10 @@ Easily change or restore the application icons for Firefox and Thunderbird on Li
 |------|------------|
 | `-f` | Change Firefox icon |
 | `-t` | Change Thunderbird icon |
-| `-r` | Restore default |
-| `-l` | Install command |
-| `-R` | Remove command |
-| `-h` | help menu |
+| `-r` | Restore to default |
+| `-l` | Create symlink command |
+| `-R` | Remove symlink command |
+| `-h` | Help menu |
 
 
 <b>Installation:</b>
