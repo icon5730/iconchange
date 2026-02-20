@@ -138,14 +138,19 @@ case $opt in
 	sleep 0.2 ; usage
 	;;
 	l)
-	echo -e "\n${cyan}[+]${endcolor} Generating 'iconchange' symlink to command path..." ; sleep 0.2
-	sudo ln -s $(readlink -f $0) /usr/bin/iconchange
-	if command -v iconchange &>/dev/null;
-		then
-		echo -e "${green}[✔]${endcolor} Symlink has been generated successfully" ; sleep 0.2
-		else
-		echo -e "${red}[!]${endcolor} Failed to generate symlink" 1>&2 ; sleep 0.2 ; exit 1
-	fi
+    if command -v iconchange &>/dev/null;
+        then
+        echo -e "${red}[!]${endcolor} Symlink already exists" 1>&2 ; exit 1
+        else
+	    echo -e "\n${cyan}[+]${endcolor} Generating 'iconchange' symlink to command path..." ; sleep 0.2
+	    sudo ln -s $(readlink -f $0) /usr/bin/iconchange
+	    if command -v iconchange &>/dev/null;
+		    then
+		    echo -e "${green}[✔]${endcolor} Symlink has been generated successfully" ; sleep 0.2
+		    else
+		    echo -e "${red}[!]${endcolor} Failed to generate symlink" 1>&2 ; sleep 0.2 ; exit 1
+	    fi       
+    fi
 	;;
 	R)
 	echo -e "\n${cyan}[-]${endcolor} Removing symlink from command path..." ; sleep 0.2
