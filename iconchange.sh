@@ -153,14 +153,19 @@ case $opt in
     fi
 	;;
 	R)
-	echo -e "\n${cyan}[-]${endcolor} Removing symlink from command path..." ; sleep 0.2
-	sudo unlink /usr/bin/iconchange
-	if ! command -v iconchange &>/dev/null;
-		then
-		echo -e "${green}[✔]${endcolor} Symlink has been successfully removed" ; sleep 0.2
-		else
-		echo -e "${red}[!]${endcolor} Failed to remove symlink" 1>&2 ; sleep 0.2 ; exit 1
-	fi
+    if ! command -v iconchange &>/dev/null;
+        then
+        echo -e "${red}[!]${endcolor} Symlink doesn't exist" 1>&2 ; exit 1
+        else
+	    echo -e "\n${cyan}[-]${endcolor} Removing symlink from command path..." ; sleep 0.2
+	    sudo unlink /usr/bin/iconchange
+	    if ! command -v iconchange &>/dev/null;
+		    then
+		    echo -e "${green}[✔]${endcolor} Symlink has been successfully removed" ; sleep 0.2
+		    else
+		    echo -e "${red}[!]${endcolor} Failed to remove symlink" 1>&2 ; sleep 0.2 ; exit 1
+	    fi
+    fi
 	;;
 	:)
 	echo -e "${red}[!]${endcolor} Option -$OPTARG requires an argument" ; 1>&2 ; exit 2
